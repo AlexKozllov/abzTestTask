@@ -6,16 +6,10 @@ import {
     getUserListActions
 } from '../actions/usersActions.js';
 
-const getApiUsers = (data) => async (dispatch) => {
-    // console.log('🚀 ~ updateCart ~ data:', data);
-    // dispatch(getTransactionsRequest());
+const getApiUsers = (page, count) => async (dispatch) => {
     try {
-        // const userList = await getUserListActions(data);
-
-        const userList = await getUserList();
+        const userList = await getUserList(page, count);
         dispatch(getUserListActions(userList));
-        console.log('🚀 ~ getApiUsers ~ userList:', userList);
-        // sessionStorage.setItem('cart', JSON.stringify(updatedCart));
     } catch (error) {
         // dispatch(getTransactionsdsError(error));
     }
