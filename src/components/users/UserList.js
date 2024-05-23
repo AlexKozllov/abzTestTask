@@ -2,9 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import User from '../user/User.js';
 
 import s from './userList.module.scss';
-import { getUserList } from '../../services/abzAgencyApi.js';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getUserListActions } from '../../redux/actions/usersActions.js';
 import { getApiUsers } from '../../redux/operations/usersOperations.js';
 import CustomBtn from '../custom/customBtn/CustomBtn.js';
 
