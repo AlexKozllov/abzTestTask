@@ -1,0 +1,33 @@
+.wrapper {
+    width: 328px;
+    height: 54px;
+    margin: 0 auto;
+    display: flex;
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.uploadInputBtn {
+    width: 110px;
+    border: 1px solid #000000;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active {
+        background: #7e7e7e;
+    }
+}
+
+.uploadInputField {
+    width: 100%;
+    padding-left: 18px;
+    border: 1px solid #d0cfcf;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: #7e7e7e;
+}
