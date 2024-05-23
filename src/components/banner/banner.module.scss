@@ -1,0 +1,35 @@
+.wrapper {
+    height: 500px;
+    background: url('/../public/pexelsalexandrPodvalny1227513.jpeg') rgba(0, 0, 0, 0.5);
+    // background: url('/../public/pexelsalexandrPodvalny1227513.jpeg');
+    // background: url('/../public/pexelsalexandrPodvalny1227513.jpeg');
+    background-size: 340%;
+    background-position-x: 51%;
+    background-position-y: 100%;
+    // background-origin: content-box;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    text-align: center; /* Текст по центру */
+    color: #fff;
+    padding: 11% 5%;
+
+    h2 {
+        font-family: Nunito;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 7%;
+    }
+    p {
+        font-family: Nunito;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 9%;
+    }
+    .position {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

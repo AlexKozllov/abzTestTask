@@ -1,0 +1,25 @@
+.radioBtnWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .radioBtnValue {
+        display: block;
+        margin-left: 12px;
+        font-family: Nunito;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.radio {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 1px solid #00bdd3;
+    border-radius: 50%;
+}
+
+.selected {
+    background: rgb(0, 189, 211);
+    background: radial-gradient(circle, #00bdd3 40%, #ffffff 40%);
+}

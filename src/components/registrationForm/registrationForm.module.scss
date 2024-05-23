@@ -1,0 +1,72 @@
+@import '../../vars.scss';
+
+section {
+    width: 326px;
+    margin: 0 auto;
+    h2 {
+        margin: 0 auto;
+        width: 328px;
+        font-family: Nunito;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    p {
+        font-family: Nunito;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 11px;
+    }
+}
+.inputTextWrapper {
+    width: 328px;
+    height: 262px;
+    margin: 0 auto;
+    margin-bottom: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Nunito;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7e7e7e;
+}
+
+.inputRadioWrapper {
+    margin-bottom: 47px;
+    label {
+        margin-bottom: 7px;
+    }
+}
+
+.submitBtn {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    min-width: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border-width: 0;
+    font-family: Nunito;
+    line-height: 26px;
+    font-size: 16px;
+    background: $buttons;
+    &:hover {
+        background: $buttonsHover;
+    }
+}
+
+.disabled {
+    background: $buttonsDisabled;
+    color: #fff;
+    &:hover {
+        background: $buttonsDisabled;
+    }
+}
