@@ -1,26 +1,27 @@
 import { getUserList, postRegistration } from '../../services/abzAgencyApi.js';
 import {
-    // getTransactionsRequest,
-    // getTransactionsSuccess,
-    // getTransactionsdsError,
-    getUserListActions,
     registrationUserRequest,
     registrationUserSuccess,
     registrationUserError,
-    resetUserListActions
+    resetUserListActions,
+    getUserListSuccess,
+    getUserListRequest,
+    getUserListError
 } from '../actions/usersActions.js';
 
 const getApiUsers = (page, count) => async (dispatch) => {
+    dispatch(getUserListRequest());
+
     try {
         const userList = await getUserList(page, count);
-        dispatch(getUserListActions(userList));
+        dispatch(getUserListSuccess(userList));
     } catch (error) {
-        // dispatch(getTransactionsdsError(error));
+        dispatch(getUserListError(error));
     }
 };
 
 const registrationUsers = (registrationForm) => async (dispatch) => {
-    // dispatch(registrationUserRequest());
+    dispatch(registrationUserRequest());
 
     try {
         const newUser = await postRegistration(registrationForm);

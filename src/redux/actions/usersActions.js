@@ -1,6 +1,8 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const getUserListActions = createAction('users/getUsers');
+const getUserListRequest = createAction('users/getUserListRequest');
+const getUserListSuccess = createAction('users/getUserListSuccess');
+const getUserListError = createAction('users/getUserListError');
 const resetUserListActions = createAction('users/resetUserListActions');
 
 const registrationUserRequest = createAction('users/registrationUserRequest');
@@ -10,7 +12,9 @@ const registrationUserResetError = createAction('users/registrationUserResetErro
 const setRegistrationUserError = createAction('users/setRegistrationUserError');
 
 export {
-    getUserListActions,
+    getUserListRequest,
+    getUserListSuccess,
+    getUserListError,
     resetUserListActions,
     registrationUserRequest,
     registrationUserSuccess,
