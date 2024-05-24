@@ -2,9 +2,11 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import logger from 'redux-logger';
 import { usersReducer } from './reducers/usersReducer.js';
+import { loading } from './reducers/loaderReducer.js';
 
 const rootReducer = combineReducers({
-    users: usersReducer
+    users: usersReducer,
+    loading: loading
 });
 
 const store = configureStore({
