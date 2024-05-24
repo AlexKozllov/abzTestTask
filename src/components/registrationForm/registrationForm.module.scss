@@ -1,11 +1,14 @@
 @import '../../vars.scss';
 
-section {
-    width: 326px;
+.wrapper {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h2 {
         margin: 0 auto;
-        width: 328px;
+        max-width: 328px;
         font-family: Nunito;
         font-weight: 400;
         font-size: 40px;
@@ -20,6 +23,7 @@ section {
         margin-bottom: 11px;
     }
 }
+
 .inputTextWrapper {
     width: 328px;
     height: 262px;
@@ -74,4 +78,16 @@ section {
 .errorText {
     color: $errorField;
     margin-left: 16px;
+}
+
+@media (min-width: 768px) {
+    .inputTextWrapper {
+        width: 380px;
+    }
+    .wrapper {
+        h2 {
+            max-width: 704px;
+            width: 704px;
+        }
+    }
 }

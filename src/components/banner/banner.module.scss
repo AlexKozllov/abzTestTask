@@ -1,24 +1,79 @@
 .wrapper {
     height: 500px;
-    background: url('/../public/pexelsalexandrPodvalny1227513.jpeg') rgba(0, 0, 0, 0.5);
-    // background: url('/../public/pexelsalexandrPodvalny1227513.jpeg');
-    // background: url('/../public/pexelsalexandrPodvalny1227513.jpeg');
-    background-size: 340%;
-    background-position-x: 51%;
-    background-position-y: 100%;
-    // background-origin: content-box;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    text-align: center; /* Текст по центру */
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
     color: #fff;
     padding: 11% 5%;
+    position: relative;
+
+    &::before {
+        content: url('/../public/pexelsalexandrPodvalny1227513.jpeg');
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -271%;
+        z-index: 1;
+        transform: scale(0.35);
+    }
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    @media (min-width: 440px) {
+        & {
+            .content {
+                max-width: 380px;
+                left: calc(50% - 190px);
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        & {
+            height: 650px;
+            padding: 16% 5%;
+            &::before {
+                left: -22%;
+                top: -201%;
+                transform: scale(0.4);
+            }
+        }
+    }
+
+    @media (min-width: 1025px) {
+        & {
+            height: 650px;
+            padding: 14% 5%;
+            &::before {
+                left: 0;
+                top: -216%;
+                transform: scale(0.6);
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        z-index: 3;
+        max-width: 323px;
+        left: calc(50% - 162px);
+    }
 
     h2 {
         font-family: Nunito;
         font-weight: 400;
         font-size: 40px;
         line-height: 40px;
-        margin-bottom: 7%;
+        margin-top: 1%;
+        margin-bottom: 6%;
     }
     p {
         font-family: Nunito;
@@ -31,5 +86,38 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    @media (min-width: 440px) {
+        & {
+            .content {
+                max-width: 380px;
+                left: calc(50% - 190px);
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        & {
+            height: 650px;
+            padding: 16% 5%;
+            &::before {
+                left: -22%;
+                top: -201%;
+                transform: scale(0.4);
+            }
+        }
+    }
+
+    @media (min-width: 1025px) {
+        & {
+            height: 650px;
+            padding: 14% 5%;
+            &::before {
+                left: 0;
+                top: -216%;
+                transform: scale(0.6);
+            }
+        }
     }
 }

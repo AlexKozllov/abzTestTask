@@ -18,7 +18,7 @@ const CustomInputText = forwardRef(
                     name={name}
                     value={value}
                     placeholder={!isInputClicked ? placeholderValue : ''}
-                    onChange={inputHandler}
+                    onChange={inputHandler || (() => {})}
                     onBlur={blureHandler}
                     ref={forwardedRef}
                 />

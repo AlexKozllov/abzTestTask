@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { isEmpty } from 'lodash';
 
 import s from './registrationForm.module.scss';
 import { getRadioBtnPositions, postRegistration } from '../../services/abzAgencyApi.js';
@@ -75,7 +74,7 @@ const RegistrationForm = () => {
     return registratedUserErrors.success ? (
         <SuccessfullyRegistered />
     ) : (
-        <section>
+        <section className={s.wrapper}>
             <h2>Working with POST request</h2>
             <form onSubmit={formHandler}>
                 <div className={s.inputTextWrapper}>
