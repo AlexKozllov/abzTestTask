@@ -24,8 +24,28 @@
     .userData {
         width: 100%;
         text-align: center;
-        overflow: hidden;
         text-overflow: ellipsis;
+        cursor: pointer;
+        position: relative;
+        .tooltiptext {
+            display: none;
+        }
+        &:hover {
+            .tooltiptext {
+                padding-left: 16px;
+                padding-right: 16px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                height: 30px;
+                color: #ffff;
+                background: #000;
+                position: absolute;
+                z-index: 10;
+                left: 55%;
+                top: 100%;
+            }
+        }
     }
 
     .position {
