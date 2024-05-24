@@ -27,17 +27,22 @@
         grid-row-gap: 20px;
     }
 
-    @media (min-width: 361px) and (max-width: 768px) {
-    }
-
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (min-width: 767px) {
+        h2 {
+            width: 704px;
+        }
         .userList {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
+            margin-bottom: 42px;
         }
     }
 
-    @media (min-width: 1025px) {
+    @media (min-width: 1023px) {
+        h2 {
+            width: 704px;
+        }
+
         .userList {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
