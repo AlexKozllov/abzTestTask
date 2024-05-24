@@ -1,9 +1,13 @@
-import { getUserList } from '../../services/abzAgencyApi.js';
+import { getUserList, postRegistration } from '../../services/abzAgencyApi.js';
 import {
     // getTransactionsRequest,
     // getTransactionsSuccess,
     // getTransactionsdsError,
-    getUserListActions
+    getUserListActions,
+    registrationUserRequest,
+    registrationUserSuccess,
+    registrationUserError,
+    resetUserListActions
 } from '../actions/usersActions.js';
 
 const getApiUsers = (page, count) => async (dispatch) => {
@@ -15,4 +19,17 @@ const getApiUsers = (page, count) => async (dispatch) => {
     }
 };
 
-export { getApiUsers };
+const registrationUsers = (registrationForm) => async (dispatch) => {
+    // dispatch(registrationUserRequest());
+
+    try {
+        const newUser = await postRegistration(registrationForm);
+        dispatch(registrationUserSuccess(newUser));
+        const userList = await getUserList(1, 6);
+        dispatch(resetUserListActions(userList));
+    } catch (error) {
+        dispatch(registrationUserError(error.response.data));
+    }
+};
+
+export { getApiUsers, registrationUsers };

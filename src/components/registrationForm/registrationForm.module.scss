@@ -70,3 +70,8 @@ section {
         background: $buttonsDisabled;
     }
 }
+
+.errorText {
+    color: $errorField;
+    margin-left: 16px;
+}

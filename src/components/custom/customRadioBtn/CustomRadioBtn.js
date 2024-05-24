@@ -2,7 +2,7 @@ import React from 'react';
 
 import s from './customRadioBtn.module.scss';
 
-const CustomRadioBtn = ({ name, id, value, selected, inputHandler }) => {
+const CustomRadioBtn = ({ name, id, value, selected, inputHandler, error, errorText }) => {
     return (
         <label htmlFor={id} className={s.radioBtnWrapper}>
             <span className={`${s.radio} ${selected ? s.selected : ''}`}></span>
