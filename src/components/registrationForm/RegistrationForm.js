@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import s from './registrationForm.module.scss';
-import { getRadioBtnPositions, postRegistration } from '../../services/abzAgencyApi.js';
+import { getRadioBtnPositions } from '../../services/abzAgencyApi.js';
 import UploadFile from '../custom/uploadFile/UploadFile.js';
 import CustomInputText from '../custom/customInputText/CustomInputText.js';
 import CustomRadioBtn from '../custom/customRadioBtn/CustomRadioBtn.js';
@@ -103,7 +103,7 @@ const RegistrationForm = () => {
                         placeholderValue="Phone"
                         helpText="+38 (XXX) XXX - XX - XX"
                         errorText={registratedUserErrors.fails && registratedUserErrors.fails.phone}
-                        onMask={(event) => inputHandler(event)}
+                        onMask={inputHandler}
                         blureHandler={validationHandler}
                     />
                 </div>

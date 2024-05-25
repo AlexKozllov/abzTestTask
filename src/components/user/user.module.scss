@@ -38,30 +38,33 @@
         border-radius: 50%;
     }
 
-    .userData {
+    .tooltiptextWrapper {
+        position: relative;
         width: 100%;
         text-align: center;
-        text-overflow: ellipsis;
-        cursor: pointer;
-        position: relative;
+        .userData {
+            cursor: pointer;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
         .tooltiptext {
             display: none;
+            white-space: nowrap;
         }
-        &:hover {
-            .tooltiptext {
-                padding-left: 16px;
-                padding-right: 16px;
-                border-radius: 4px;
-                display: flex;
-                align-items: center;
-                height: 30px;
-                color: #ffff;
-                background: #000;
-                position: absolute;
-                z-index: 10;
-                left: 55%;
-                top: 100%;
-            }
+        .userData:hover + .tooltiptext {
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            color: #ffff;
+            background: #000;
+            position: absolute;
+            z-index: 10;
+            left: 55%;
+            top: 100%;
         }
     }
 
